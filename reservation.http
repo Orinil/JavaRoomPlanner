@@ -1,0 +1,39 @@
+### CREATE RESERVATION FAILED - FULL
+POST localhost:8080/reservation/create
+Content-Type: application/json
+Authorization: d58a54c9-b9a4-4948-a7e2-a56a8e5dfa88
+
+{
+  "roomId": 1,
+  "name": "moje rezervace",
+  "from": "2022-05-08T12:59:11.332",
+  "to": "2022-05-13T12:59:11.332"
+}
+
+### CREATE RESERVATION FAILED - INVALID REQUEST
+POST localhost:8080/reservation/create
+Content-Type: application/json
+Authorization: d58a54c9-b9a4-4948-a7e2-a56a8e5dfa88
+
+{
+  "roomId": 1,
+  "name": "moje rezervace",
+  "from": "2022-05-20T12:59:11.332",
+  "to": "2022-05-13T12:59:11.332"
+}
+
+### CREATE RESERVATION - OK
+POST localhost:8080/reservation/create
+Content-Type: application/json
+Authorization: d58a54c9-b9a4-4948-a7e2-a56a8e5dfa88
+
+{
+  "roomId": 1,
+  "name": "moje rezervace",
+  "from": "2022-05-14T12:59:11.332",
+  "to": "2022-05-20T12:59:11.332"
+}
+
+### Get all users
+GET localhost:8080/reservation
+Authorization: d58a54c9-b9a4-4948-a7e2-a56a8e5dfa88

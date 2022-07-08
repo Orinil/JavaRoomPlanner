@@ -1,0 +1,37 @@
+### Get user by id
+GET localhost:8080/user/1
+Authorization: d58a54c9-b9a4-4948-a7e2-a56a8e5dfa88
+
+### Get all users
+GET localhost:8080/user
+Authorization: d58a54c9-b9a4-4948-a7e2-a56a8e5dfa88
+
+### Create a user
+POST localhost:8080/user
+Content-Type: application/json
+Authorization: d58a54c9-b9a4-4948-a7e2-a56a8e5dfa88
+
+{
+  "name": "Petr"
+}
+
+### Update a user by id
+PUT localhost:8080/user/5
+Content-Type: application/json
+Authorization: d58a54c9-b9a4-4948-a7e2-a56a8e5dfa88
+
+{
+  "name": "Ne Petr"
+}
+
+### Delete a user by id
+DELETE localhost:8080/user/4
+Authorization: d58a54c9-b9a4-4948-a7e2-a56a8e5dfa88
+### Login user
+POST localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "test"
+}
